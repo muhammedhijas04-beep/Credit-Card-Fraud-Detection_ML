@@ -77,16 +77,6 @@ fraud-detection-system/
     ├── manual_page.png
     └── csv_page.png
 
-⚙️ Installation & Setup
-1. Clone the repository
-git clone https://github.com/your-username/fraud-detection-system.git
-cd fraud-detection-system
-
-2. Install dependencies
-pip install -r requirements.txt
-
-3. Run the application
-streamlit run app.py
 
 
 📦 Dataset
@@ -183,4 +173,5 @@ Muhammed Hijas
 ⭐ If you like this project
 
 Give it a star on GitHub ⭐
+
 It helps others find it and supports my work.
