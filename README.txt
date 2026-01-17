@@ -174,4 +174,3 @@ Muhammed Hijas
 
 Give it a star on GitHub ⭐
 
-It helps others find it and supports my work.
