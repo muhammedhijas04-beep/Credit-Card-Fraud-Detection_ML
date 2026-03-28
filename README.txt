@@ -1,176 +1,73 @@
-# 💳 Credit Card Fraud Detection System
+💳 Credit Card Fraud Detection & Risk Analysis
 
-An AI-powered fraud detection system that identifies suspicious credit card transactions using machine learning.  
-Supports both **manual transaction scanning** and **bulk CSV fraud analysis** with downloadable reports.
+🧠 Project Overview
 
----
+This project develops a fraud detection system to identify suspicious credit card transactions using machine learning and data analysis techniques.
 
-✨ Features
+The goal is to support risk monitoring and fraud prevention by detecting high-risk transactions in real time and at scale.
 
-- 🔍 Real-time fraud prediction (manual mode)
-- 📁 Bulk CSV fraud scanning
-- 📊 Fraud probability & risk level scoring
-- 📥 Downloadable fraud reports (CSV)
-- 🧠 Trained Random Forest ML model
-- ⚡ Fast & interactive Streamlit UI
-- 🔐 Privacy-preserving PCA features
+🚨 Business Problem
 
----
+Financial institutions face:
 
-🧠 Tech Stack
+Increasing fraud transactions
+High cost of undetected fraud
+Need for real-time risk assessment
 
-| Component | Technology |
-|---------|-------------|
-| Language | Python |
-| UI | Streamlit |
-| ML Model | Random Forest |
-| Data Processing | Pandas, NumPy |
-| Scaling | StandardScaler |
-| Model Storage | Joblib |
-| Dataset | ULB Credit Card Fraud Dataset |
+👉 Key question:
 
----
+“Which transactions are likely fraudulent and require immediate attention?”
 
-## 📊 Model Performance
-
-| Metric | Score |
-|--------|-------|
-| Accuracy | 99.9% |
-| ROC-AUC | 0.92 |
-| Precision (Fraud) | 0.89 |
-| Recall (Fraud) | 0.75 |
-| F1 Score | 0.81 |
-
----
-
-🏗 System Architecture
-Fraud Detection System
-│
-├── Manual Fraud Scanner (Real-time Prediction)
-│   ├ Input transaction details
-│   ├ Predict fraud probability
-│   ├ Risk classification
-│   └ Result dashboard
-│
-└── CSV Fraud Scanner (Batch Processing)
-    ├ Upload transaction CSV
-    ├ Scan all transactions
-    ├ Generate fraud probability
-    └ Download fraud report
-
-📂 Project Structure
-fraud-detection-system/
-│
-├── app.py                    # Streamlit web application
-├── fraud_model.pkl          # Trained Random Forest model
-├── scaler.pkl               # Trained StandardScaler
-├── requirements.txt         # Dependencies
-├── README.md                # Project documentation
-│
-├── notebook/
-│   └── model_training.ipynb # Model training notebook
-│
-├── sample_data/
-│   └── test_transactions.csv
-│
-└── screenshots/
-    ├── manual_page.png
-    └── csv_page.png
-
-
-
-📦 Dataset
-
-Dataset used: ULB Credit Card Fraud Dataset
-
+🎯 Business Impact
+Enables early fraud detection
+Reduces financial losses
+Supports risk-based transaction monitoring
+Improves decision-making for fraud analysts
+📊 Dataset Summary
 284,807 transactions
+492 fraud cases (highly imbalanced)
+PCA-transformed features (V1–V28)
+Includes transaction time and amount
+🛠 Tools & Technologies
+Python (Pandas, NumPy) – Data processing
+Scikit-learn – Model development
+Random Forest – Fraud classification
+Streamlit – Interactive application
+🔍 Key Analysis
+Severe class imbalance (~0.17% fraud cases)
+Fraud patterns differ significantly from normal transactions
+Feature scaling and preprocessing are critical for model performance
 
-492 fraud cases
+🤖 Model Approach
 
-PCA anonymized features (V1–V28)
+Applied Random Forest classifier for fraud detection
+Handled class imbalance using appropriate preprocessing
+Evaluated model using precision, recall, and ROC-AUC
 
-Time & Amount columns
+📈 Model Performance
 
-Highly imbalanced dataset
+Metric	Score
+Accuracy	99.9%
+ROC-AUC	0.92
+Precision (Fraud)	0.89
+Recall (Fraud)	0.75
+F1 Score	0.81
 
-Source: Kaggle / ULB Machine Learning Group
+👉 Focus: High precision to reduce false fraud alerts
 
-💻 Usage Examples
-Manual Scanner
+⚙️ System Capabilities
 
-Enter transaction values
+Real-time transaction risk prediction
+Bulk fraud detection via CSV
+Fraud probability scoring
+Downloadable analysis reports
 
-Click Predict Fraud Risk
+🔮 Key Insights
 
-Get fraud probability and risk level
+Fraud detection requires balancing precision vs recall
+Even small fraud rates can have high financial impact
+Model performance must be aligned with business risk tolerance
 
-CSV Scanner
+🚀 Final Outcome
 
-Upload CSV file
-
-Click Scan Transactions
-
-Download fraud report
-
-📈 How It Works
-
-User enters transaction or uploads CSV
-
-Input is validated and scaled
-
-Random Forest model predicts fraud probability
-
-Risk level is calculated
-
-Results are displayed & downloadable
-
-
-🎯 Use Cases
-
-Banking transaction monitoring
-
-Payment gateway fraud detection
-
-Financial compliance audits
-
-Risk analytics platforms
-
-Fraud research & training
-
-
-🔮 Future Improvements
-
-PDF report export
-
-Cloud deployment
-
-Batch API service
-
-Model explainability (SHAP)
-
-Transaction history dashboard
-
-User authentication
-
-
-🐛 Troubleshooting
-
-
-| Issue             | Solution             |
-| ----------------- | -------------------- |
-| Model not loading | Check file path      |
-| Wrong predictions | Ensure feature order |
-| Scaling error     | Verify scaler.pkl    |
-| CSV error         | Check column names   |
-
-
-
-👨‍💻 Author
-
-Muhammed Hijas
-
-
-⭐ If you like this project
-
-Give it a star on GitHub ⭐
-
+Built a fraud detection system that identifies high-risk transactions with strong precision and supports scalable fraud monitoring and risk analysis.
